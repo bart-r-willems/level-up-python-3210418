@@ -1,0 +1,15 @@
+import string
+
+
+def main():
+    assert palindrome('race 23 c"ar') == True
+    assert palindrome('Hello world') == False
+    print('All tests passed')
+
+
+def palindrome(text):
+    text = [x.lower() for x in text if x in string.ascii_letters]
+    return text == text[::-1]
+
+
+main()
